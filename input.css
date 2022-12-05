@@ -4,29 +4,28 @@
 
 /*? extending tailwind styles for html elements */
 @layer base {
-  h1 {
-    @apply text-3xl;
-  }
-  h2 {
-    @apply text-xl;
-  }
 }
 /*? creating custom classes that include o set of tailwind clases */
 @layer components {
-  .btn-blue {
-    @apply bg-blue-500 py-2 px-4 rounded-xl text-white font-bold hover:bg-blue-700;
-  }
 }
 
 /*? use tailwind theme function to set a value from the configuration file */
 .content-area {
-  @apply bg-green-200;
-  height: theme("spacing.128");
 }
 
 /*? use tailwind breakpints to set a value for media queries */
 @media screen(xl) {
-  body {
-    @apply bg-black text-white;
+}
+
+#hero {
+  background-image: url("../images/desktop/image-hero.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+@media (max-width: 576px) {
+  #hero {
+    background-image: url("../images/mobile/image-hero.jpg");
+    background-position: center;
   }
 }
